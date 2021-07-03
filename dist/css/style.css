@@ -2,7 +2,7 @@
 @import "./tailwind.min.css";
 
 :root{
-    --light: #FFFFFF;
+    --light: #F2F2F2;
     --dark: #0E0F16;
     --black: #000000;
     --first: #3A302B;
@@ -11,15 +11,35 @@
     --fourth: #E8E7E6;
     --fifth: #b6b5b3;
     --gray: #83858E;
-    --light-gray: #a9a9a9;
+    --light-dark: #32434F;
 }
 
 body{
-    background-color: var(--light);
+    /* background-color: var(--light); */
     font-family: 'jost', sans-serif;
 }
 
+.text-fourth{
+    color: var(--fourth);
+}
+
+.text-fifth{
+    color: var(--fifth);
+}
+
+.hover\:font-bold:hover{
+    font-weight: 300;
+}
+
 /* background */
+.bg-light{
+    background-color: var(--light);
+}
+
+.bg-light-dark{
+    background-color: var(--light-dark);
+}
+
 .bg-dark{
     background-color: var(--dark);
 }
@@ -80,29 +100,21 @@ body{
         position: absolute;
         top: 100%;
         left: 0;
-        padding: 2rem 0;
         text-align: center;
         width: 100%;
         height: auto;
+        padding: 1rem 0;
         background-color: var(--third);
-        transition: height 1s;
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-        /* display: block;
-        -webkit-animation-name: fadeOutUp;
-        animation-name: fadeOutUp; */
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+        transition: clip-path .5s;
     }
 
     .nav.active{
-        display: block;
-        -webkit-animation-name: fadeInDown;
-        animation-name: fadeInDown;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
     }
 
     .nav-link {
-        margin: .5rem 0;
+        margin: .8rem 0;
     }
 }
 .nav .nav-link{
@@ -233,7 +245,7 @@ body{
     right: .8rem;
     padding: .5rem;
     background-color: var(--light);
-    color: #31444E;
+    color: var(--light-dark);
     border-radius: 50%;
     transition: all .4s;
 }
@@ -258,7 +270,7 @@ body{
 
 .product .img-container .product-wishlist:hover{
     color: var(--light);
-    background-color: #31444E;
+    background-color: var(--light-dark);
 }
 
 .product .img-container .product-actions button{
@@ -274,7 +286,7 @@ body{
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
 .product .img-container .product-actions .btn-cart{
-    background-color: #31444E;
+    background-color: var(--light-dark);
     color: var(--light);
 }
 
@@ -290,16 +302,16 @@ body{
 }
 
 .product .img-container .product-actions .btn-cart:hover{
-    color: #31444E;
+    color: var(--light-dark);
 }
 
 .product .img-container .product-actions .btn-shop{
     background-color: var(--light);
-    color: #31444E;
+    color: var(--light-dark);
 }
 
 .product .img-container .product-actions .btn-shop::before{
-    background-color: #31444E;
+    background-color: var(--light-dark);
 }
 
 .product .img-container .product-actions .btn-shop:hover{
@@ -401,7 +413,7 @@ body{
 }
 
 .owl-carousel:hover .owl-nav button:hover {
-    color: #31444E !important;
+    color: var(--light-dark) !important;
 }
 
 

@@ -8,6 +8,7 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../dist/css/style.css">
     <link rel="stylesheet" href="../vendors/owl-carousel/css/owl.theme.default.min.css">
@@ -20,17 +21,20 @@
     <header class="flex justify-between absolute z-10 top-0 left-0 right-0 bg-transparent px-6 md:px-10 xl:px-20 py-4 wow fadeIn" data-wow-delay=".6s">
         <nav class="flex md:space-x-20 lg:space-x-24 xl:space-x-48 text-sm text-black">
             <div class="uppercase text-xl">Utero</div>
-
-            <ul class="nav hidden uppercase self-center md:flex md:space-x-8 lg:space-x-10 xl:space-x-20">
-                <li class="nav-link active" >home</li>
-                <li class="nav-link" >shop</li>
-                <li class="nav-link" >product</li>
-                <li class="nav-link" >blog</li>
-                <li class="nav-link" >pages</li>
-            </ul>
+            
+            <div class="nav">
+                <ul class="uppercase self-center md:flex md:space-x-8 lg:space-x-10 xl:space-x-20">
+                    <li class="nav-link active" >home</li>
+                    <li class="nav-link" >shop</li>
+                    <li class="nav-link" >product</li>
+                    <li class="nav-link" >blog</li>
+                    <li class="nav-link" >pages</li>
+                </ul>
+            </div>
+            
         </nav>
 
-        <div class="self-center flex space-x-2 md:space-x-3 lg:space-x-6">
+        <div class="self-center flex space-x-3 md:space-x-3 lg:space-x-6">
             <i data-feather="search" class="w-5 h-5"></i>
             <i data-feather="user" class="w-5 h-5"></i>
             <div class="flex space-x-3">
@@ -39,7 +43,7 @@
                     <span
                         class="cart-prd absolute -right-2 -bottom-1 bg-black rounded-full w-4 h-4 text-center text-white">2</span>
                 </div>
-                <span class="text-xs self-center">$ 220.00</span>
+                <span class="text-xs hidden md:block self-center">$ 220.00</span>
             </div>
             <button type="menu" class="md:hidden focus:outline-none burger" id="burger"></button>
         </div>
@@ -129,7 +133,7 @@
                     <span class="uppercase">1986</span>
                 </div>
                 <div class="mb-10">
-                    <h1 class="text-4xl xl:text-6xl mb-6">Utero's philosophy</h1>
+                    <h1 class="text-4xl xl:text-6xl mb-6 font-light">Utero's philosophy</h1>
                     <span class="font-bold text-md xl:text-lg">"Good design meant good business"</span>
                     <div class="mt-10">
                         <p class="mb-6 text-xs xl:text-base">
@@ -150,8 +154,11 @@
     </section>
 
     <!-- best seller -->
-    <section class="px-8 py-16 md:px-20 lg:px-24 xl:px-40 bg-fourth w-full h-1/2">
-        <h1 class="text-4xl xl:text-6xl mb-6">Best seller</h1>
+    <section class="px-8 py-16 md:px-20 lg:px-24 xl:px-40 bg-light w-full h-1/2">
+        <div class="flex justify-between">
+            <h1 class="text-4xl xl:text-6xl mb-6 font-light">Best seller</h1>
+            <a href="#" class="self-center font-light">view all ></a>
+        </div>
         <div class="products-carousel owl-carousel relative mb-8">
             <div class="product">
                 <div class="img-container overflow-hidden">
@@ -169,7 +176,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -190,7 +197,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -211,7 +218,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -232,7 +239,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -253,7 +260,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -274,7 +281,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -295,7 +302,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -316,7 +323,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -329,19 +336,19 @@
     </section>
 
     <!-- promo section -->
-    <section class="promo w-full h-96 py-24 md:py-20 xl:py-24" style="background-image: url(../dist/images/lonely-814631_1920.jpg);">
+    <section class="promo w-full h-96 py-20 xl:py-24" style="background-image: url(../dist/images/lonely-814631_1920.jpg);">
         <div class="text-center text-white">
-            <span class="uppercase font-light text-xs">gift guide 2021</span>
-            <h1 class="uppercase text-5xl mt-6 mb-10 md:px-64 lg:px-96">the gift guide</h1>
+            <span class="uppercase font-extralight text-xs">gift guide 2021</span>
+            <h1 class="uppercase text-5xl font-light mt-6 mb-10 md:px-64 lg:px-96">the gift guide</h1>
             <p class="text-xs px-10 md:px-52 lg:px-80 md:text-base">present the samll, gift for your family, friend other in the special events.</p>
         </div>
     </section>
 
     <!-- new in -->
-    <section class="px-8 py-16 md:px-20 lg:px-24 xl:px-40 bg-fourth w-full h-1/2">
+    <section class="px-8 py-16 md:px-20 lg:px-24 xl:px-40 bg-light w-full h-1/2">
         <div class="flex justify-between">
-            <h1 class="text-4xl xl:text-6xl mb-6">New in</h1>
-            <a href="#" class="self-center">view all ></a>
+            <h1 class="text-4xl xl:text-6xl mb-6 font-light">New in</h1>
+            <a href="#" class="self-center font-light">view all ></a>
         </div>
         <div class="products-carousel owl-carousel relative mb-8">
             <div class="product">
@@ -360,7 +367,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -381,7 +388,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -402,7 +409,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -423,7 +430,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -444,7 +451,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -465,7 +472,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -486,7 +493,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -507,7 +514,7 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                    <h2 class="underline font-bold product-title">Zipped cotton cardigan</h2>
+                    <h2 class="underline font-semibold product-title">Zipped cotton cardigan</h2>
                     <div class="product-desc">
                         <span class="price-promo">$49.5</span> <span class="price">$68.5</span>
                     </div>
@@ -519,11 +526,175 @@
         </div>
     </section>
 
-    <section class="promo w-full h-96 grid gap-1 grid-cols-1 md:grid-cols-2">
-        <div class="py-24 md:py-20 xl:py-24">
-
+    <section class="w-full grid gap-1 grid-cols-1 md:grid-cols-2">
+        <div class="h-96 promo py-20 xl:py-24" style="background-image: url(../dist/images/mnz-ToLMORRb97Q-unsplash.jpg);">
+            <div class="text-center text-white w-3/4 mx-auto">
+                <span class="uppercase font-light text-xs">collection</span>
+                <h1 class="capitalize font-light text-6xl mt-6 mb-10 ">online exclusive</h1>
+                <p class="text-xs px-10 lg:text-base">Discover selected items with many discount for online exclusive</p>
+            </div>
+        </div>
+        <div class="h-96 promo py-20 xl:py-24" style="background-image: url(../dist/images/pexels-r-fera-432059\ \(1\).jpg);">
+            <div class="text-center text-white w-3/4 mx-auto">
+                <span class="uppercase font-light text-xs">sale to up</span>
+                <h1 class="uppercase font-light text-6xl mt-6 mb-4 "> <span class="text-red-500">40%</span> off</h1>
+                <h2 class="uppercase font-extralight mb-8">on selected items</h2>
+                <p class="text-xs px-10 lg:text-base">present the samll, gift for your family, friend other in the special events.</p>
+            </div>
         </div>
     </section>
+
+    <!-- pub -->
+    <section class="my-12 bg-light w-4/5 xl:w-3/5 mx-auto py-8 px-4">
+        <div class="flex-col space-y-4 md:flex md:flex-row justify-center md:space-y-0 md:space-x-4 xl:space-x-16">
+            <h1 class="font-bold lg:text-xl">Klarna.</h1>
+            <div class="md:w-64 lg:w-72">
+                <h1 class="font-light mb-2 lg:text-xl">Shop Now. Pay Later</h1>
+                <p class="text-xs font-extralight lg:text-base">Pay later in full is a deferred payment that gives shoppers an extra 14, 21 or 30 days to try before they buy</p>
+            </div>
+            <div>
+                <button class="relative uppercase text-xs xl:text-base px-6 py-2 border border-black hover:bg-black hover:text-white">find out more</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- article -->
+    <section class="px-8 py-16 md:px-20 lg:px-24 xl:px-40 w-full">
+        <div class="flex justify-between">
+            <h1 class="text-4xl xl:text-6xl mb-6 font-light">World of Utero</h1>
+            <a href="#" class="self-center font-light">all articles ></a>
+        </div>
+        <div class="grid gap-8 grid-cols-1 lg:grid-cols-3">
+            <div class="article">
+                <div class="w-full h-40 md:h-64 lg:h-40 xl:h-48 bg-red-500"></div>
+                <div class="mt-2">
+                    <p class="font-light text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis minima nemo . </p>
+                    <h1 class="my-1">Title</h1>
+                    <h1 class="uppercase text-xs">inspiration/ <span class="capitalize font-light">Dec 15, 2021</span></h1>
+                </div>
+            </div>
+            <div class="article">
+                <div class="w-full h-40 md:h-64 lg:h-40 xl:h-48 bg-red-500"></div>
+                <div class="mt-2">
+                    <h1 class="my-1">Title</h1>
+                    <h1 class="uppercase text-xs">inspiration/ <span class="capitalize font-light">Dec 15, 2021</span></h1>
+                </div>
+            </div>
+            <div class="article">
+                <div class="w-full h-40 md:h-64 lg:h-40 xl:h-48 bg-red-500"></div>
+                <div class="mt-2">
+                    <h1 class="my-1">Title</h1>
+                    <h1 class="uppercase text-xs">inspiration/ <span class="capitalize font-light">Dec 15, 2021</span></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light w-full px-8 py-16 md:px-20 xl:px-32 divide-y divide-gray-300 divide-solid">
+        <div class="mb-40 w-full grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+                <h1 class="uppercase text-md font-light mb-8">Utero</h1>
+                <div class="text-sm font-extralight">
+                    <p class="mb-6">268 Elizabeth Ave Str, Brooklyn, CA, 90025</p>
+                    <p class="mb-6">
+                        <a class="hover:underline" href="tel:+00825614334">+0082 561 43 34</a>
+                    </p>
+                    <p class="mb-6">
+                        <a class="hover:underline" href="mailto:support@utero.com">support@utero.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="uppercase text-md font-light mb-8">help</h1>
+                <div class="text-sm font-extralight">
+                    <ul class="space-y-6">
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">FAQs</a>
+                        </li>
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">Payment</a>
+                        </li>
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">Shipping</a>
+                        </li>
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">Returns</a>
+                        </li>
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">Gift card</a>
+                        </li>
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">Guest purchase</a>
+                        </li>
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">Electronic receipt</a>
+                        </li>
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="uppercase text-md font-light mb-8">company</h1>
+                <div class="text-sm font-extralight">
+                    <ul class="space-y-6">
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">About Store</a>
+                        </li>
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">Contact</a>
+                        </li>
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">Careers</a>
+                        </li>
+                        <li class="hover:underline hover:font-bold">
+                            <a href="#">Our journals</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="uppercase text-md font-light mb-8">newsletter</h1>
+                <div class="text-sm font-extralight">
+                    <p class="mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, corporis?</p>
+                    <form action="">
+                        <input type="email" placeholder="Enter your email address" class="w-full text-sm font-extralight border border-gray-400 py-2 px-3 focus:outline-none">
+                        <p class="mt-3 mb-6">By subsrcibing, you accept <a href="http://" class="capitalize font-semibold underline" target="_blank" rel="noopener noreferrer">privacy policy</a></p>
+                        <button class="bg-light-dark uppercase text-white text-sm font-light py-2 px-8">subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="pt-8 grid gap-8 grid-cols-1 lg:grid-cols-3">
+            <!-- <div> -->
+                <p class="font-extralight text-xs">
+                    &copy;<script> document.write((new Date()).getFullYear())</script> <span class="font-semibold uppercase">utero</span>. All right reserved.
+                </p>
+            <!-- </div> -->
+
+            <!-- <div> -->
+                <p class="font-semibold text-xs">
+                    English / USD (US Dollar)
+                </p>
+            <!-- </div> -->
+            <div class="flex space-x-2">
+                <p class="font-extralight text-xs self-center">
+                    Accept for: 
+                </p>
+                <div class="flex space-x-4">
+                    <i class="text-xl fab fa-paypal"></i>
+                    <i class="text-xl fab fa-cc-mastercard"></i>
+                    <i class="text-xl fab fa-google-pay"></i>
+                    <i class="text-xl fab fa-apple-pay"></i>
+                    <i class="text-xl fab fa-cc-visa"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="../dist/js/jquery-3.4.1.js"></script>
     <script src="../dist/js/feather.min.js"></script>
