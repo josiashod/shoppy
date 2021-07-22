@@ -71,6 +71,22 @@
         }
     });
 
+    // $('#cart-btn').on('click',function(event){
+    //     event.stopPropagation();
+    //     if ($('#cart').hasClass('active')) {
+    //         // $('#cart-price').fadeIn("slow")
+    //         $('#cart').toggleClass('active')
+    //     } else {
+    //         // $('#cart-price').fadeOut("slow")
+    //         $('#cart').toggleClass('active')
+    //     }
+    // })
+
+    // $(window).click(() => {
+    //     $('#cart').removeClass('active')
+    //     // $('#cart-price').fadeIn("slow")
+    // });
+
     /*Feather Icon*/
 	var featherIcon = $('i');
 	if( featherIcon.length > 0 ){

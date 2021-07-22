@@ -14,6 +14,17 @@
     --light-dark: #32434F;
 }
 
+@keyframes dropdown {
+    from {
+        opacity: 0;
+        top: -50%;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 body{
     /* background-color: var(--light); */
     font-family: 'jost', sans-serif;
@@ -75,6 +86,7 @@ body{
     width: 100%;
     transition: transform .5s;
     left: 0;
+    cursor: pointer;
 }
 .burger::before{
     top: -5px;
@@ -94,6 +106,32 @@ body{
     transform: rotate(45deg);
 }
 
+/* dropdown */
+.dropdown .dropdown-btn{
+
+}
+
+.nav .dropdown .dropdown-content .nav-link{
+    color: var(--black);
+}
+.nav .dropdown .dropdown-content .nav-link:hover{
+    text-decoration: underline;
+}
+
+.dropdown .dropdown-content{
+    position: absolute;
+    padding: .1rem .2rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    min-width: 6rem;
+}
+.dropdown:hover .dropdown-content{
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+}
+
 /* NAV LINK */
 @media (max-width: 765px){
     .nav {
@@ -109,6 +147,29 @@ body{
         transition: clip-path .5s;
     }
 
+    .nav .dropdown .dropdown-content{
+        position: relative;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+        transition: clip-path .5s;
+        opacity: 1;
+        visibility: visible;
+        height: 0;
+    }
+
+    .nav .dropdown:hover .dropdown-content{
+        height: 100%;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    .nav .dropdown .dropdown-content .nav-link{
+        color: var(--black);
+        text-decoration: none;
+    }
+    .nav .dropdown .dropdown-content .nav-link:hover{
+        text-decoration: underline;
+    }
+
     .nav.active{
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
     }
@@ -120,8 +181,9 @@ body{
 .nav .nav-link{
     color: var(--fifth);
 }
-.nav .nav-link.active{
+.nav .nav-link:hover,.nav .nav-link.active{
     color: var(--first);
+    text-decoration: underline;
 }
 
 /* button */
@@ -133,8 +195,8 @@ body{
 .btn::before{
     content: "";
     position: absolute;
-    top: 12%;
-    left: 3%;
+    top: 4.5px;
+    left: 4.5px;
     z-index: -1;
     width: 100%;
     height: 100%;
@@ -211,7 +273,7 @@ body{
     height: 100%;
 }
 
-.cart-prd{
+.cart-count{
     background-color: var(--first);
     font-size: 10px;
 }
@@ -288,19 +350,19 @@ body{
     color: #FFFFFF;
 }
 
-.product .img-container .product-actions .btn-cart:hover{
-    color: var(--light-dark);
-    background-color: #FFFFFF;
-}
-
 .product .img-container .product-actions .btn-shop{
     background-color: #FFFFFF;
     color: var(--light-dark);
 }
 
-.product .img-container .product-actions .btn-cart:hover{
+.product .img-container .product-actions .btn-shop:hover{
     background-color: var(--light-dark);
     color: #FFFFFF;
+}
+
+.product .img-container .product-actions .btn-cart:hover{
+    color: var(--light-dark);
+    background-color: #FFFFFF;
 }
 
 .product .img-container img{
@@ -401,6 +463,44 @@ body{
     color: var(--light-dark) !important;
 }
 
+/*Cart*/
+.cart-dropdown{
+    cursor: pointer;
+}
+.cart-dropdown .cart{
+    position: absolute;
+    top: 2.5rem;
+    right: -100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.cart-dropdown .cart a:hover.cart-prd{
+    text-decoration: underline;
+}
+
+.cart-dropdown:hover .cart{
+    opacity: 1;
+    visibility: visible;
+    animation: dropdown .5s ease;
+}
+
+.cart::before{
+    content: "";
+    position: absolute;
+    top: -.9rem;
+    right: 5%;
+    width: 0;
+    height: 0;
+    border-left: .8rem solid transparent;
+    border-right: .8rem solid transparent;
+    border-bottom: .9rem solid #ffffff;
+}
+
+.cart-dropdown:hover + #cart-price{
+    opacity: 0;
+}
 
 /**
 Promo
@@ -409,6 +509,31 @@ Promo
 .promo{
     background-position: center;
     background-size: cover;
+}
+
+/* auth */
+.auth-container{
+    overflow: hidden;
+}
+
+.auth {
+    transform: rotate(-45deg) translateY(-40%);
+}
+
+.overlay{
+    background-color: hsla(0, 0%, 0%, 0.618);
+    opacity: .2s;
+}
+
+.auth .band{
+    font-size: 25px;
+}
+.auth .band :nth-child(even){
+    color: #000000;
+}
+
+.auth .band :nth-child(odd){
+    color: #ffffff;
 }
 
 
