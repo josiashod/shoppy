@@ -19,6 +19,47 @@
     //     $(".loader").delay(2000).fadeOut();
     //     $("#preloader").delay(2000).fadeOut("slow");
     // });
+    var lastScrollTop = 0;
+    $(window).scroll(function () {
+        let st = $(this).scrollTop();
+
+        if (st > 10) {
+            $("header").addClass('bg-white');
+        }
+        else {
+            $("header").removeClass('bg-white');
+        }
+
+        let headerDown = false
+        if(st > lastScrollTop){
+            $("header").addClass('-top-1/2');
+            headerDown = false;
+        }
+        else {
+            $("header").removeClass('-top-1/2');
+            headerDown = true;
+        }
+
+        if (st > 180) {
+            $(".filter-container").removeClass('relative')
+            $(".filter-container").addClass('fixed top-2 left-0 right-0');
+            $('.filter').addClass('border-l border-r border-black')
+        }
+        else {
+            $(".filter-container").addClass('relative')
+            $(".filter-container").removeClass('fixed top-2 left-0 right-0');
+            $('.filter').removeClass('border-l border-r border-black')
+        }
+
+        if (headerDown && $(".filter-container").hasClass('fixed')) {
+            $(".filter-container").addClass('translate-y-16');
+        }
+        else {
+            $(".filter-container").removeClass('translate-y-16');
+        }
+
+        lastScrollTop = st;
+    });
 
     new WOW().init();
     

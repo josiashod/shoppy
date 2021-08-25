@@ -371,15 +371,18 @@ body{
 }
 
 .product .product-title{
+    font-weight: lighter;
     margin-bottom: .1rem;
 }
 
 .product .product-desc{
+    font-weight: lighter;
     margin-bottom: .2rem;
     color: var(--gray);
 }
 
 .product .product-color{
+    font-weight: lighter;
     color: var(--light-gray);
 }
 
@@ -520,11 +523,6 @@ Promo
     transform: rotate(-45deg) translateY(-40%);
 }
 
-.overlay{
-    background-color: hsla(0, 0%, 0%, 0.618);
-    opacity: .2s;
-}
-
 .auth .band{
     font-size: 25px;
 }
@@ -576,4 +574,93 @@ Promo
         width: 18rem;
         margin: 0;
     }
+}
+
+/* breadcrumb */
+.breadcrumb .breadcrumb-items .breadcrumb-item{
+    position: relative;
+}
+
+.breadcrumb .breadcrumb-items .breadcrumb-item:first-child::before{
+    content: "";
+}
+
+.breadcrumb .breadcrumb-items .breadcrumb-item::before{
+    content: "/";
+    position: absolute;
+    top: 0;
+    left: -.7rem;
+    color: var(--black);
+}
+
+.breadcrumb .breadcrumb-items .breadcrumb-item.active{
+    color: var(--fifth);
+    pointer-events: none;
+}
+
+.count-result{
+    position: relative;
+}
+.count-result::before,.count-result::after{
+    position: absolute;
+    top: 0;
+}
+
+.count-result::before{
+    content: "[";
+    left: -.3rem;
+}
+.count-result::after{
+    content: "]";
+    right: -.3rem;
+}
+
+.filter{
+    position: relative;
+}
+
+.filter .filter-content .filter-item{
+    position: relative;
+}
+
+.filter .filter-content .filter-item .filter-title{
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: white;
+}
+
+.filter .filter-content .filter-item .filter-list{
+    position: absolute;
+    top: 98%;
+    min-height: 10rem;
+    width: 12rem;
+    background: #fff;
+    padding: .6rem .8rem;
+    visibility: hidden;
+    opacity: 0;
+    border: 1px solid black;
+}
+
+.filter .filter-content .filter-item:hover .filter-title{
+    border: 1px solid black;
+    border-bottom: 0;
+}
+
+.filter .filter-content .filter-item:hover .filter-title .drop-icon{
+    transition: .2s;
+    transform: rotate(180deg);
+}
+
+.filter .filter-content .filter-item:hover .filter-list{
+    visibility: visible;
+    opacity: 1;
+}
+
+.filter .filter-content .filter-item .filter-list .filter-link-count{
+    color: var(--gray);
+}
+
+.product-grid .product{
+    width: 100%;
 }

@@ -17,20 +17,24 @@
 </head>
 
 <body>
-    <div class="absolute transform -translate-x-1/2 -translate-y-1/2 inset-y-1/2 inset-x-1/2 shadow-sm w-4/5 h-5/6 bg-gray-100 mx-auto">
+    <div class="h-screen">
         <div class="w-full h-full grid grid-cols-1 md:grid-cols-3">
            <div class="w-full h-full md:col-span-2 auth-container" style="background-image: url(../dist/images/pexels-karolina-grabowska-4194857.jpg); background-size: cover; background-position:center;">
-               <div class="overlay">
-                    <div class="auth" id="auth-side"></div>
-               </div>
+               
            </div>
-           <div class="font-light w-4/5 mx-auto">
-            <form action="#">
-                <h1 class="text-3xl uppercase text-center">Connexion :)</h1>
-                <div class="">
-                    <input  class="w-full py-1 px-2 focus:outline-none font-light" type="email" name="" id="" placeholder="Entrez votre email">
-                </div>
-            </form>
+           <div class="font-light h-screen flex-wrap content-center">
+            <div class="w-4/6 mx-auto">
+                <form action="#">
+                    <h1 class="text-3xl text-bold uppercase text-center">Connexion</h1>
+                    <div class="relative mb-2">
+                        <input class="w-full py-1 px-2 focus:outline-none border border-black placeholder-black" type="email" placeholder="Entrez votre email">
+                    </div>
+                    <div class="relative">
+                        <input class="w-full py-1 px-2 focus:outline-none border border-black placeholder-black" type="password" placeholder="Entrez votre email">
+                        <div>show</div>
+                    </div>
+                </form>
+            </div>
            </div>
         </div>
     </div>

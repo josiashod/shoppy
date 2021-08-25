@@ -19,7 +19,7 @@
 
 <body>
     <!-- header -->
-    <header class="flex justify-between absolute z-10 top-0 left-0 right-0 bg-transparent px-6 md:px-10 xl:px-20 py-4 wow fadeIn" data-wow-delay=".6s">
+    <header class="flex justify-between fixed z-50 transition-top duration-500 top-0 left-0 right-0 bg-transparent px-6 md:px-10 xl:px-20 py-4 wow fadeIn" data-wow-delay=".6s">
         <nav class="flex md:space-x-20 lg:space-x-24 xl:space-x-48 text-sm text-black">
             <div class="uppercase text-xl">Utero</div>
             
@@ -50,7 +50,7 @@
             <div class="flex space-x-3">
                 <div class="relative cart-dropdown">
                     <a href="javascript:void(0);" id="cart-btn" class=""><i data-feather="shopping-cart" class="w-5 h-5"></i></a>
-                    <div id="cart" class="cart rounded-sm w-72 bg-white space-y-2 py-2">
+                    <div id="cart" class="cart shadow-lg rounded-lg w-72 bg-white space-y-2 py-2">
                         <div class="cart-content px-4 py-2 h-40 space-y-2 overflow-y-scroll">
                             <div class="relative h-16 flex space-x-2 px-1 py-1 w-full bg-gray-100">
                                 <div class="w-1/4 h-full rounded-sm">
@@ -98,6 +98,10 @@
                         <div class="cart-price px-4 flex justify-between py-1">
                             <span class="text-xl">Total</span>
                             <span class="font-light"> $ 220.00 </span>
+                        </div>
+                        <div class="cart-btns grid grid-cols-2 gap-2 px-4">
+                            <button class="py-2 px-4 rounded-lg py-2 text-black hover:bg-gray-300 bg-gray-200">Clear cart</button>
+                            <button class="py-2 px-4 rounded-lg py-2 text-white bg-black">Checkout</button>
                         </div>
                     </div>
                     <span class="cart-count absolute -right-2 -bottom-1 bg-black rounded-full w-4 h-4 text-center text-white">3</span>
